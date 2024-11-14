@@ -9,7 +9,7 @@ public class Node : MonoBehaviour
     public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
     /// <summary>
-    /// 선택된 터렛 정보
+    /// 배치된 터렛 정보
     /// </summary>
     [HideInInspector]
     public GameObject turret;
@@ -25,11 +25,15 @@ public class Node : MonoBehaviour
 
     BuildManager buildManager;
 
+    RangeManager rangeManager;
+
     void Start() {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     
         buildManager = BuildManager.instance;
+
+        rangeManager = RangeManager.instance;
     }
 
     /// <summary>
@@ -125,6 +129,10 @@ public class Node : MonoBehaviour
         if(EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if(turret != null) {
+            rangeManager.ShowRange(this.transform.position,turret.GetComponent<Turret>().range);            
+        }
+
         if(!buildManager.CanBuild)
             return;
 
@@ -139,5 +147,6 @@ public class Node : MonoBehaviour
 
     void OnMouseExit() {
         rend.material.color = Color.white;
+        rangeManager.hideRange();
     }
 }
