@@ -8083,6 +8083,8 @@ GameObject:
   - component: {fileID: 774805895}
   - component: {fileID: 774805896}
   - component: {fileID: 774805897}
+  - component: {fileID: 774805898}
+  - component: {fileID: 774805899}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -8207,6 +8209,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TurretRange: {fileID: 2083147909}
   positionOffset: {x: 0, y: 1.5, z: 0}
+--- !u!114 &774805898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774805890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b73096ae6ee9794a83c9d15ce346289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!114 &774805899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774805890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012ca0835962e044b60cd00ec2ee730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldTextPrefab: {fileID: 5904431013238180843, guid: c2e56b205e1d5b34e940e9077d6a5486, type: 3}
+  goldCanvas: {fileID: 1403944871}
 --- !u!1001 &784896215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9741,13 +9770,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 34.2, y: 67.427246, z: -50.3}
+  m_LocalRotation: {x: 0.4383711, y: 0, z: 0, w: 0.89879405}
+  m_LocalPosition: {x: 37, y: 52, z: -53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15468,6 +15497,107 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1403944868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403944872}
+  - component: {fileID: 1403944871}
+  - component: {fileID: 1403944870}
+  - component: {fileID: 1403944869}
+  m_Layer: 5
+  m_Name: GoldUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1403944869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403944868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1403944870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403944868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &1403944871
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403944868}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1403944872
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403944868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1420469678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21823,16 +21953,19 @@ MonoBehaviour:
     cost: 100
     upgradedPrefab: {fileID: 3751010659391606061, guid: 09a4460a34fa1814bb51bdc98fcde2bc, type: 3}
     upgradeCost: 60
+    turretCursor: {fileID: 2800000, guid: b9302b89da2d31c49a8171728eb17c7b, type: 3}
   missileLauncher:
     prefab: {fileID: 1951661775091586376, guid: 437221776aaf18e419375120a9d430a1, type: 3}
     cost: 250
     upgradedPrefab: {fileID: 1951661775091586376, guid: 2dc787b21a53c1442b3399883ffd68b7, type: 3}
     upgradeCost: 150
+    turretCursor: {fileID: 2800000, guid: 2d9ad4a7edd2bad4eaecc05c14019171, type: 3}
   laserBeamer:
     prefab: {fileID: 3997723652894142933, guid: f7594c0ab4841714bb1c9f5213ff8b02, type: 3}
     cost: 350
     upgradedPrefab: {fileID: 3997723652894142933, guid: 05b05f33c3772c048872cf9cfe0dcbb5, type: 3}
     upgradeCost: 250
+    turretCursor: {fileID: 2800000, guid: 4b58d0da2f82edc499a0ca8e1e669c60, type: 3}
 --- !u!114 &1996891550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23167,3 +23300,4 @@ SceneRoots:
   - {fileID: 1949120383}
   - {fileID: 647669697}
   - {fileID: 2083147911}
+  - {fileID: 1403944872}

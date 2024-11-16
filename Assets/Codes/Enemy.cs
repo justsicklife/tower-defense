@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour
         WaveSpawner.EnemiesAlive--;
 
         Destroy(gameObject);
+        EnemyGoldDisplay.instance.showGoldText(this.transform.position,worth);
     }
 
 }

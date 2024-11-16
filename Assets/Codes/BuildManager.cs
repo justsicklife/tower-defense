@@ -43,6 +43,8 @@ public class BuildManager : MonoBehaviour
         turretToBuild = null;
 
         nodeUI.setTarget(node);
+        CursorManager.instance.SetCursorToDefault();
+
     }
 
     /// <summary>
@@ -59,6 +61,7 @@ public class BuildManager : MonoBehaviour
     public void SelectTurretToBuild(TurretBlueprint turret) {
         turretToBuild = turret; 
         DeselectNode();
+        CursorManager.instance.SetCursorToTurret(turretToBuild.turretCursor);
     }
 
     public TurretBlueprint GetTurretToBuild() {

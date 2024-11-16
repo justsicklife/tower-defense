@@ -12,6 +12,8 @@ public class TurretBlueprint
     public GameObject upgradedPrefab;
     public int upgradeCost;
 
+    public Texture2D turretCursor;
+
     public int GetSellAmount () {
         return cost / 2;
     }
