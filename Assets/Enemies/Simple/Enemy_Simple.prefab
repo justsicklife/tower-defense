@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4894886208031860009}
   - component: {fileID: 6043686906665582973}
   - component: {fileID: 3976404081870403152}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7120220696158353253}
   - component: {fileID: 5516542664338015235}
   - component: {fileID: 3045110762013142568}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 2909208955183202016}
   - component: {fileID: 6256144357915821449}
   - component: {fileID: 1393170708604092203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy_Simple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -300,7 +300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSpeed: 10
   speed: 50
-  health: 100
+  isFrozen: 0
+  startHealth: 100
   worth: 50
   deathEffect: {fileID: 7844002779178898423, guid: be678e72cd0f2df47b4e362161c36b2b, type: 3}
   healthBar: {fileID: 8705666124811301286}
@@ -327,7 +328,7 @@ GameObject:
   - component: {fileID: 8587982900266054321}
   - component: {fileID: 3134451354963775418}
   - component: {fileID: 8705666124811301286}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

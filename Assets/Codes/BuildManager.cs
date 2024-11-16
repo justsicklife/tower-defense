@@ -19,6 +19,9 @@ public class BuildManager : MonoBehaviour
     /// 선택된 터렛
     /// </summary>
     private TurretBlueprint turretToBuild;
+    /// <summary>
+    /// 선택한 노드
+    /// </summary>
     private Node selectedNode;
 
     public NodeUI nodeUI;
@@ -56,7 +59,7 @@ public class BuildManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 상점에서 선택한 터렛이 들어간다
+    /// 상점에서 선택한 터렛이 turretToBuild 변수에 들어간다
     /// </summary>
     public void SelectTurretToBuild(TurretBlueprint turret) {
         turretToBuild = turret; 
