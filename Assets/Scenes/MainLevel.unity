@@ -7422,7 +7422,7 @@ GameObject:
   - component: {fileID: 703608242}
   - component: {fileID: 703608241}
   m_Layer: 5
-  m_Name: ShockButton
+  m_Name: ShockSpellButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7491,8 +7491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 774805900}
-        m_TargetAssemblyTypeName: SpellManager, Assembly-CSharp
+      - m_Target: {fileID: 1440418586}
+        m_TargetAssemblyTypeName: SpellSelector, Assembly-CSharp
         m_MethodName: SellectShockSpell
         m_Mode: 1
         m_Arguments:
@@ -8083,7 +8083,6 @@ GameObject:
   - component: {fileID: 774805897}
   - component: {fileID: 774805898}
   - component: {fileID: 774805899}
-  - component: {fileID: 774805900}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -8235,25 +8234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldTextPrefab: {fileID: 5904431013238180843, guid: c2e56b205e1d5b34e940e9077d6a5486, type: 3}
   goldCanvas: {fileID: 1403944871}
---- !u!114 &774805900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 774805890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9d4cc34133282b4e8c19bbcaea83c29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellToUse: 0
-  range: 5
-  freezeDuration: 1
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  rangeIndicatorPrefab: {fileID: 6357122690665692143, guid: 587e54089b31bd7499575a3118ab63da, type: 3}
 --- !u!1001 &784896215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15795,6 +15775,7 @@ GameObject:
   - component: {fileID: 1440418584}
   - component: {fileID: 1440418583}
   - component: {fileID: 1440418582}
+  - component: {fileID: 1440418586}
   m_Layer: 5
   m_Name: Spell
   m_TagString: Untagged
@@ -15885,6 +15866,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1440418586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440418581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dc3593cff44ae46898079fbb58cf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shockSpell: {fileID: 2000558159}
 --- !u!1001 &1462185699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17240,6 +17234,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7363676280387167646, guid: 8f1620fceecd60d4a98e26d640fac26a, type: 3}
   m_PrefabInstance: {fileID: 1560370051}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1577492393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577492396}
+  - component: {fileID: 1577492394}
+  m_Layer: 0
+  m_Name: SpellManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1577492394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577492393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d4cc34133282b4e8c19bbcaea83c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1577492396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577492393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1583998998
 GameObject:
   m_ObjectHideFlags: 0
@@ -22029,6 +22067,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996891547}
   m_CullTransparentMesh: 1
+--- !u!1 &2000558159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000558161}
+  - component: {fileID: 2000558160}
+  m_Layer: 0
+  m_Name: ShockSpell
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2000558160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000558159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0666856458ddf54fb1f8d292517a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 5
+  freezeDuration: 1
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  rangeIndicatorPrefab: {fileID: 6357122690665692143, guid: 587e54089b31bd7499575a3118ab63da, type: 3}
+  damage: 5
+--- !u!4 &2000558161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000558159}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2053074155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23300,3 +23389,5 @@ SceneRoots:
   - {fileID: 2083147911}
   - {fileID: 1403944872}
   - {fileID: 1440418585}
+  - {fileID: 1577492396}
+  - {fileID: 2000558161}

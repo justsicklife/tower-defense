@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public float speed;
 
-    public bool isFrozen = false;
+    // public bool isFrozen = false;
 
     public float startHealth = 100;
     private float health;
@@ -55,24 +55,4 @@ public class Enemy : MonoBehaviour
         EnemyGoldDisplay.instance.showGoldText(this.transform.position,worth);
     }
 
-    public void Freeze(float duration,float amount ) {
-
-        TakeDamage(amount);
-
-        if(isFrozen) 
-        return;
-
-        StartCoroutine(FreezeCoroutine(duration));
-
-    }
-
-    IEnumerator FreezeCoroutine(float duration) {
-        isFrozen = true;
-        speed = 0; 
-
-        yield return new WaitForSeconds(duration);
-
-        speed = startSpeed;
-        isFrozen = false;
-    }
 }

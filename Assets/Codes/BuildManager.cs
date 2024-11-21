@@ -71,4 +71,10 @@ public class BuildManager : MonoBehaviour
         return turretToBuild;
     }
 
+    public void ClearSelection() {
+        DeselectNode();
+        turretToBuild = null;
+        CursorManager.instance.SetCursorToDefault();
+    }
+
 }
