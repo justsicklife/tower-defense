@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7227660564628895693}
   - component: {fileID: 7637704565219048247}
+  - component: {fileID: 3667607677652651700}
   m_Layer: 0
   m_Name: MissileLauncher
   m_TagString: Untagged
@@ -47,12 +48,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
+  bulletPrefab: {fileID: 8829048792698344241, guid: 8bb6b587480d4c549b04a965a25b605c, type: 3}
   fireRate: 0.25
+  useLaser: 0
+  damageOverTime: 30
+  slowAmount: 0.5
+  lineRenderer: {fileID: 0}
+  impactEffect: {fileID: 0}
+  impactLight: {fileID: 0}
   enemyTag: Enemy
   partToRotate: {fileID: 5966153436242614941}
   turnSpeed: 10
-  bulletPrefab: {fileID: 8829048792698344241, guid: 8bb6b587480d4c549b04a965a25b605c, type: 3}
   firePoint: {fileID: 3733117562711882040}
+--- !u!114 &3667607677652651700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951661775091586376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318e0b2de134e6d4185e0abbd4c7f6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4568729925675471888
 GameObject:
   m_ObjectHideFlags: 0

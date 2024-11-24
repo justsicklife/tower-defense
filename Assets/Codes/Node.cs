@@ -128,9 +128,9 @@ public class Node : MonoBehaviour
     {
         if(EventSystem.current.IsPointerOverGameObject())
             return;
-
-        if(turret != null) {
-            rangeManager.ShowRange(this.transform.position,turret.GetComponent<Turret>().range);            
+        TurretBlueprint turretToBuild = BuildManager.instance.GetTurretToBuild();
+        if(turretToBuild != null) {
+            rangeManager.ShowRange(this.transform.position,turretToBuild.prefab.GetComponent<Turret>().range);            
         }
 
         if(!buildManager.CanBuild)
